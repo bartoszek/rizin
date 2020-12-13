@@ -22,9 +22,7 @@ if r.returncode() == 0
   rizin_version_minor = vers[2]
   rizin_version_patch = vers[3]
   rizin_version_number = vers[4]
-  if host_machine.system() == 'darwin'
-    rizin_version = rizin_version.split('-')[0]
-  endif
+  rizin_version = rizin_version.split('-')[0]
 else
   message('Cannot find project version with sys/version.py')
 endif
